@@ -1,0 +1,16 @@
+li {
+    padding: 0 30px;
+}
+
+a {
+    font-size: 34px;
+    font-family: 'Lora', serif;
+}
+
+.navbar-padding {
+    padding: 80px 70px;
+}
+
+.navbar-padding-test {
+    padding: 0 0;
+}

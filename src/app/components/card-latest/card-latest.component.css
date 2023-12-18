@@ -1,0 +1,25 @@
+.card-latest {
+    position: relative;
+}
+
+.content-latest-card {
+    position: absolute;
+    top: 0;
+    text-transform: capitalize;
+}
+
+.title {
+    color: aliceblue;
+    font-size: 24px;
+    
+}
+
+.descript {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.author {
+    text-align: end;
+    font-size: 20px;
+}

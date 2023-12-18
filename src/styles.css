@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+html {
+    --bg-color: #efefef;
+    --font-color: #000000;
+    --font-color-subtitle: #222222;
+}
+
+html.dark {
+    --bg-color: #151a1e;
+    --font-color: #ffffff;
+    --font-color-subtitle: #e6e6e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #151a1e;
+    --font-color: #ffffff;
+    --font-color-subtitle: #e6e6e6;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #efefef;
+    --font-color: #000000;
+    --font-color-subtitle: #222222;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1, p, a {
+  font-family: 'Lato', sans-serif;;
+  color: var(--font-color)!important;
+}
+
+
+.subtitle {
+  color: var(--font-color-subtitle);
+}
