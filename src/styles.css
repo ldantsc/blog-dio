@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 html {
-    --bg-color: #efefef;
-    --font-color: #000000;
-    --bg-color-footer: #161616;
-    --font-color-subtitle: #DFDFDF;
-    
+  --bg-color: #efefef;
+  --font-color: #000000;
+  --bg-color-footer: #161616;
+  --font-color-subtitle: #dfdfdf;
 }
 
 html.dark {
-    --bg-color: #151a1e;
-    --font-color: #ffffff;
-    --bg-color-footer: #161616;
-    --font-color-subtitle: #e6e6e6;
+  --bg-color: #151a1e;
+  --font-color: #ffffff;
+  --bg-color-footer: #161616;
+  --font-color-subtitle: #e6e6e6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +27,7 @@ html.dark {
   :root {
     --bg-color: #efefef;
     --font-color: #000000;
-    --bg-color-footer: #DFDFDF;
+    --bg-color-footer: #dfdfdf;
     --font-color-subtitle: #222222;
   }
 }
@@ -37,13 +36,16 @@ body {
   background-color: var(--bg-color);
 }
 
-h1, p, a, li {
-  font-family: 'Lato', sans-serif;;
-  color: var(--font-color)!important;
+h1,
+p,
+a,
+li {
+  font-family: "Lato", sans-serif;
+  color: var(--font-color) !important;
 }
 
 h3 {
-  color: var(--font-color-subtitle)!important;
+  color: var(--font-color-subtitle) !important;
 }
 
 li {

@@ -1,5 +1,5 @@
 .footer-main {  
-    margin: 80px 68px 0 68px;
+    margin: 75px 68px 0 68px;
     padding: 0 30px;
     display: flex;
     justify-content: space-around;
@@ -11,6 +11,17 @@
     flex-shrink: 1;
 }
 
+.footer-social-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.footer-contact-container {
+    display: flex;
+    align-items: center;
+}
 
 .footer-about-me {
     display: flex;

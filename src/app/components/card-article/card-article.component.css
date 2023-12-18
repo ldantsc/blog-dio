@@ -1,25 +1,26 @@
 .card-article-container {
-    display: flex;
-    text-align: end;
-    justify-content: end;
-    align-items: center;
-    gap: 12px;
-    margin: 12px 0;
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
 }
 
-.title, .author {
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
+.title,
+.author {
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
 }
 
 .descript {
-    font-size: 24px;
-    font-weight: 700;
-    padding-left: 200px;
-    margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 200px;
+  margin: 0;
 }
 
 .author {
-    padding-top: 20px;
+  padding-top: 20px;
 }
