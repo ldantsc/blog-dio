@@ -1,5 +1,4 @@
-<div class="card-latest">
-    <img [src]="imageCard" alt="" srcset="">
+<div class="card-latest" [style]="{'background-image': 'url(' + imageCard + ')'}">
     <div class="content-latest-card">
         <h3 class="title">{{ title }}</h3>
         <p class="descript">{{ descript }}</p>

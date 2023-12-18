@@ -1,0 +1,25 @@
+.footer-main {  
+    margin: 80px 68px 0 68px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    height: 85%;
+}
+
+.footer-descript-container {
+    padding: 0 0 24px 0;
+    flex-shrink: 1;
+}
+
+
+.footer-about-me {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--font-color);
+}
+
+.footer-about-me > p {
+    margin: 0;
+    padding: 18px;
+    font-family: "Lora";
+}

@@ -1,0 +1,10 @@
+.footer-contact-container > ol {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 24px;
+}
+
+li {
+    font-family: "Lora", serif;
+}

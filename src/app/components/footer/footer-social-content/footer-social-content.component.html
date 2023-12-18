@@ -1,0 +1,8 @@
+<div class="footer-social-container">
+    <p>Follow Us</p>
+    <ol class="social-icon-list">
+        @for (item of socialIcons; track $index) {
+            <li><a href=""><img [src]="item" alt="" srcset=""></a></li>
+        }
+    </ol>
+</div>

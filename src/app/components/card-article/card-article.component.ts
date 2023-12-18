@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './card-article.component.css'
 })
 export class CardArticleComponent {
-
+  imageSrc: string = "/assets/card-img.png"
 }

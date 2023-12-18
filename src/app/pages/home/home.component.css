@@ -2,6 +2,10 @@
     margin: 60px;
 }
 
+main {
+    margin: 0 46px;
+}
+
 .title-home {
     display: flex;
     justify-content: space-between;
@@ -12,6 +16,7 @@
     font-family: "Lora", serif;
     font-style: italic;
     font-weight: 700;
+    margin-bottom: 60px;
 }
 
 .latest-container > h1 {
@@ -23,3 +28,8 @@
     font-size: 36px;
     text-decoration: underline;
 }
+
+.articles {
+    border-left: 1px solid white ;
+}
+
