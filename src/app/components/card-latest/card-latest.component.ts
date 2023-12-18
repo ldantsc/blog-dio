@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { MoreDetailLinkComponent } from '../more-detail-link/more-detail-link.component';
 
 @Component({
   selector: 'app-card-latest',
   standalone: true,
-  imports: [],
+  imports: [MoreDetailLinkComponent],
   templateUrl: './card-latest.component.html',
   styleUrl: './card-latest.component.css'
 })

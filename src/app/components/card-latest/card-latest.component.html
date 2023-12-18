@@ -1,12 +1,12 @@
 <div
-  class="card-latest"
+  class="card-latest custom-shadow"
   [style]="{ 'background-image': 'url(' + imageCard + ')' }">
   <div class="content-latest-card">
     <h3 class="title">{{ title }}</h3>
     <p class="descript">{{ descript }}</p>
     <p class="author">by {{ author }}</p>
     <div>
-      <a href="#">More details</a>
+      <app-more-detail-link />
     </div>
   </div>
 </div>

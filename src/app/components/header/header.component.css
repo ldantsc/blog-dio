@@ -5,6 +5,7 @@ li {
 a {
     font-size: 34px;
     font-family: 'Lora', serif;
+    color: var(--font-color);
 }
 
 .navbar-padding {
@@ -13,4 +14,12 @@ a {
 
 .navbar-padding-test {
     padding: 0 0;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: var(--font-color-grey);
+}
+
+.nav-link.active {
+    color: white;
 }

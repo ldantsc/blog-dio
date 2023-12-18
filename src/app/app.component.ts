@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MoreDetailLinkComponent } from './components/more-detail-link/more-detail-link.component';
 
 @Component({
     selector: 'app-root',

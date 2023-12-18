@@ -4,14 +4,14 @@ html {
   --bg-color: #efefef;
   --font-color: #000000;
   --bg-color-footer: #161616;
-  --font-color-subtitle: #dfdfdf;
+  --font-color-grey: #e6e6e6;
 }
 
 html.dark {
   --bg-color: #151a1e;
   --font-color: #ffffff;
   --bg-color-footer: #161616;
-  --font-color-subtitle: #e6e6e6;
+  --font-color-grey: #e6e6e6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +19,7 @@ html.dark {
     --bg-color: #151a1e;
     --font-color: #ffffff;
     --bg-color-footer: #161616;
-    --font-color-subtitle: #e6e6e6;
+    --font-color-grey: #e6e6e6;
   }
 }
 
@@ -28,7 +28,7 @@ html.dark {
     --bg-color: #efefef;
     --font-color: #000000;
     --bg-color-footer: #dfdfdf;
-    --font-color-subtitle: #222222;
+    --font-color-grey: #222222;
   }
 }
 
@@ -37,27 +37,24 @@ body {
 }
 
 h1,
+h2,
 p,
 a,
 li {
   font-family: "Lato", sans-serif;
-  color: var(--font-color) !important;
+  color: var(--font-color);
 }
 
-h3 {
-  color: var(--font-color-subtitle) !important;
+h3, .subtitle {
+  color: var(--font-color-grey);
 }
 
 li {
   list-style: none;
 }
 
-img {
+.custom-shadow {
   box-shadow: 1px 2px 5px 0 rgb(0, 0, 0, 0.45);
-}
-
-.subtitle {
-  color: var(--font-color-subtitle);
 }
 
 footer {

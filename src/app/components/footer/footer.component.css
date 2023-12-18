@@ -29,7 +29,11 @@
     border-top: 1px solid var(--font-color);
 }
 
-.footer-about-me > p {
+.footer-about-me > a {
+    text-decoration: none;
+}
+
+.footer-about-me > a > p {
     margin: 0;
     padding: 18px;
     font-family: "Lora";

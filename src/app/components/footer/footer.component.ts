@@ -11,5 +11,6 @@ import { FooterContactContentComponent } from './footer-contact-content/footer-c
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  aboutMeText:string = "Desenvolvido por Lucas Dantas em dezembro de 2023"
+  aboutMeText:string = "Desenvolvido por Lucas Dantas Coelho em dezembro de 2023"
+  link: string = "https://dantsdev.vercel.app/"
 }
