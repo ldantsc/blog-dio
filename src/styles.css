@@ -40,7 +40,8 @@ h1,
 h2,
 p,
 a,
-li {
+li,
+label {
   font-family: "Lato", sans-serif;
   color: var(--font-color);
 }
