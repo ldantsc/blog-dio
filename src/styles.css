@@ -32,6 +32,10 @@ html.dark {
   }
 }
 
+* {
+  font-size: 62.5%;
+}
+
 body {
   background-color: var(--bg-color);
 }
@@ -48,6 +52,14 @@ label {
 
 h3, .subtitle {
   color: var(--font-color-grey);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 li {
