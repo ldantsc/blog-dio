@@ -1,0 +1,71 @@
+{
+    "articles": [
+        {
+            "id": "1",
+            "title": "Travel",
+            "description": "Explore exotic landscapes and create unforgettable travel memories.",
+            "author": "Emma Reynolds",
+            "post": "",
+            "image": "/assets/card-img.png"
+        },
+        {
+            "id": "2",
+            "title": "Sports",
+            "description": "Thrilling matches and incredible athleticism define the sports world.",
+            "author": "Jackson Bennett",
+            "post": "",
+            "image": "/assets/card-img-1.png"
+        },
+        {
+            "id": "3",
+            "title": "Art",
+            "description": "Immerse yourself in the vibrant colors of artistic expression.",
+            "author": "Aria Mitchell",
+            "post": "",
+            "image": "/assets/card-img-2.png"
+        }
+    ],
+    "newsletter": [
+        {
+            "id": "1",
+            "title": "Technologies",
+            "description": "Innovations shaping tomorrow: where tech and imagination converge.",
+            "post": "",
+            "image": "/assets/card-image.png"
+        },
+        {
+            "id": "2",
+            "title": "Nature",
+            "description": "Discover the serene beauty of untouched natural landscapes.",
+            "post": "",
+            "image": "/assets/card-image-1.png"
+        },
+        {
+            "id": "3",
+            "title": "Animals",
+            "description": "Embrace the playful charm and grace of feline companions.",
+            "post": "",
+            "image": "/assets/card-image-3.png"
+        }
+    ],
+    "latest": [
+        {
+            "id": "1",
+            "title": "Technologies",
+            "description": "Tech's edge: unveil future with bold innovations.",
+            "post": "",
+            "image": "/assets/card-latest.png"
+        }
+    ],
+    "about-page": [
+        {
+            "about": {
+                "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "image": "/assets/about-image.png"
+            },
+            "footer": {
+                "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+            }
+        }
+    ]
+}
