@@ -24,3 +24,10 @@
 .author {
   padding-top: 20px;
 }
+
+
+.card-image-arcticle-container{
+  position: relative;
+  width: 200px;
+  height: 140px;
+}

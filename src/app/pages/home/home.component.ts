@@ -4,7 +4,6 @@ import { CardArticleComponent } from '../../components/card-article/card-article
 import { CardNewsletterComponent } from '../../components/card-newsletter/card-newsletter.component';
 
 @Component({
-  selector: 'app-home',
   standalone: true,
   imports: [CardLatestComponent, CardArticleComponent, CardNewsletterComponent],
   templateUrl: './home.component.html',

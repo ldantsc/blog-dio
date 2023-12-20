@@ -1,31 +1,34 @@
 import { Component, OnInit } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
-import { QueryArticleService } from './card-article.service';
+import { BlogApiService } from '../../services/blog-api.service';
 
 @Component({
   selector: 'app-card-article',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './card-article.component.html',
   styleUrl: './card-article.component.css'
 })
-export class CardArticleComponent implements OnInit {
-    imageSrc: string = "/assets/card-img.png"
-    id: number = 1
-    parametro!: string;
-    api:any = [];
 
-    constructor(private route: ActivatedRoute, private articleService: QueryArticleService) { }
+export class CardArticleComponent implements OnInit{
   
-    ngOnInit(): void {
-      this.parametro = this.route.snapshot.params['parametro'];
-      this.articleService.getArticle(this.parametro).subscribe(
-        response => { 
-          this.api = response
+  title: string = "Travel"
+  descript: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+  author: string = "Johne Doe"
+  img: string = "/assets/card-img.png"
+
+  constructor(private service: BlogApiService) {}
+
+  ngOnInit(): void {
+    this.service.getArticle(1).subscribe({
+      next(res) {
+        console.log(res)
       },
-        (error) => {
-        console.error('Erro ao buscar dados da API', error);
-        }
-      )
-    }
+      error(err) {
+        console.error(err)
+      },
+    })
+  }
+  
 }
