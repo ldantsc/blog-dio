@@ -13,6 +13,6 @@ export class CardLatestComponent {
   @Input() id: number = 0;
   @Input() title: string = "";
   @Input() description: string = "";
-  @Input() author: string = "TESTE";
+  @Input() author: string = "";
   @Input() image: string = "";
 }

@@ -3,11 +3,8 @@ import { CardLatestComponent } from "../../components/card-latest/card-latest.co
 import { CardArticleComponent } from "../../components/card-article/card-article.component";
 import { CardNewsletterComponent } from "../../components/card-newsletter/card-newsletter.component";
 import { BlogApiService } from "../../services/blog-api.service";
-import {
-  ArticleData,
-  LatestData,
-  NewsletterData,
-} from "../../models/modelData";
+import { ArticlesData } from "../../models/modelData";
+
 
 @Component({
   standalone: true,
@@ -16,27 +13,27 @@ import {
   styleUrl: "./home.component.css",
 })
 export class HomeComponent implements OnInit {
-  articles!: ArticleData | any;
-  latests!: LatestData | any;
-  newsletters!: NewsletterData | any;
+  articles!: ArticlesData | any;
+  latests!: ArticlesData | any;
+  newsletters!: ArticlesData | any;
 
   constructor(private service: BlogApiService) {}
 
   ngOnInit(): void {
-    this.service.getArticle("articles").subscribe({
-      next: (res: ArticleData) => {
+    this.service.getArticles("articles").subscribe({
+      next: (res: ArticlesData) => {
         this.articles = res;
       },
     });
 
-    this.service.getLatest("latest").subscribe({
-      next: (res: LatestData) => {
+    this.service.getArticles("latest").subscribe({
+      next: (res: ArticlesData) => {
         this.latests = res;
       },
     });
 
-    this.service.getNewsletter("newsletter").subscribe({
-      next: (res: NewsletterData) => {
+    this.service.getArticles("newsletter").subscribe({
+      next: (res: ArticlesData) => {
         this.newsletters = res;
       },
     });

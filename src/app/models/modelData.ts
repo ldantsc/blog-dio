@@ -1,26 +1,9 @@
-export type ArticleData = {
+export type ArticlesData = {
   id: number;
   title: string;
   description: string;
   author: string;
   post: string;
-  image: string;
-};
-
-export type NewsletterData = {
-  id: number;
-  title: string;
-  description: string;
-  post: string;
-  image: string;
-};
-
-export type LatestData = {
-  id: number;
-  title: string;
-  description: string;
-  post: string;
-  author: string;
   image: string;
 };
 
