@@ -1,8 +1,17 @@
 <div class="card-newsletter-container">
-    <img class="custom-shadow" src="assets/card-image.png" alt="" srcset="">
-    <div class="card-content">
-        <h2 class="title">Technologies</h2>
-        <p class="descript">{{ descript }}</p>
-        <app-more-detail-link />
-    </div>
+  <div class="card-newsletter-image-container">
+    <img
+      class="custom-shadow"
+      [ngSrc]="image"
+      width="300"
+      height="380"
+      alt="image"
+      srcset=""
+    />
+  </div>
+  <div class="card-content">
+    <h2 class="title">{{ title }}</h2>
+    <p class="descript">{{ description }}</p>
+    <app-more-detail-link [id]="id" />
+  </div>
 </div>

@@ -1,25 +1,45 @@
 <section id="home" class="home-content">
   <main
     id="home-main-content"
-    class="row justify-content-center align-items-center g-2">
+    class="row justify-content-center align-items-center g-2"
+  >
     <div class="col latest-container">
       <h1>Latest</h1>
-      <app-card-latest />
+      @for (latest of latests; track $index) {
+      <app-card-latest
+        [id]="latest.id"
+        [title]="latest.title"
+        [description]="latest.description"
+        [author]="latest.author"
+        [image]="latest.image"
+      />
+      }
     </div>
     <div class="col articles-container">
       <h2 class="subtitle">articles</h2>
       <div class="articles">
-        <app-card-article />
-        <app-card-article />
-        <app-card-article />
+        @for (article of articles; track $index) {
+        <app-card-article
+          [id]="article.id"
+          [title]="article.title"
+          [description]="article.description"
+          [author]="article.author"
+          [image]="article.image"
+        />
+        }
       </div>
     </div>
     <div id="newsletter-container" class="row newsletter-container">
       <h3>Newsletter</h3>
       <div class="newsletter-card-container">
-        <app-card-newsletter />
-        <app-card-newsletter />
-        <app-card-newsletter />
+        @for (newsletter of newsletters; track $index) {
+        <app-card-newsletter
+          [id]="newsletter.id"
+          [title]="newsletter.title"
+          [description]="newsletter.description"
+          [image]="newsletter.image"
+        />
+        }
       </div>
     </div>
   </main>

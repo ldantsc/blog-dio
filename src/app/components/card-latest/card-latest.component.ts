@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
-import { MoreDetailLinkComponent } from '../more-detail-link/more-detail-link.component';
+import { Component, Input, OnInit } from "@angular/core";
+import { NgOptimizedImage } from "@angular/common";
+import { MoreDetailLinkComponent } from "../more-detail-link/more-detail-link.component";
 
 @Component({
-  selector: 'app-card-latest',
+  selector: "app-card-latest",
   standalone: true,
-  imports: [MoreDetailLinkComponent],
-  templateUrl: './card-latest.component.html',
-  styleUrl: './card-latest.component.css'
+  imports: [MoreDetailLinkComponent, NgOptimizedImage],
+  templateUrl: "./card-latest.component.html",
+  styleUrl: "./card-latest.component.css",
 })
 export class CardLatestComponent {
-  imageCard: string = '/assets/card-latest.png'
-  title: string='technologies'
-  descript: string='lorem ipsum dolor sit amet, consectetur adipiscing elit'
-  author: string='john doe'
+  @Input() id: number = 0;
+  @Input() title: string = "";
+  @Input() description: string = "";
+  @Input() author: string = "";
+  @Input() image: string = "";
 }

@@ -3,9 +3,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-footer-contact-content',
   standalone: true,
-  imports: [],
-  templateUrl: './footer-contact-content.component.html',
-  styleUrl: './footer-contact-content.component.css'
+  template: `
+  <ol>
+    <li>{{ email }}</li>
+    <li>{{ phone }}</li>
+    <li>{{ adress }}</li>
+  </ol>
+  `,
+  styles: `
+  ol {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 24px;
+  }
+
+  li {
+    font-family: "Lora", serif;
+    font-size: 2rem;
+  }
+  `
 })
 export class FooterContactContentComponent {
   email: string = "emailjhondoe@email.com"

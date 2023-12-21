@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
+import { NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: "app-footer-social-content",
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: "./footer-social-content.component.html",
   styleUrl: "./footer-social-content.component.css",
 })

@@ -1,17 +1,16 @@
 .card-newsletter-container {
-    width: 360px;
+  width: 360px;
 }
-
 .card-content {
-    margin-top: 19px;
+  margin-top: 19px;
 }
 
 .title {
-    font-size: 24px;
-    color: var(--font-color-grey)
+  font-size: 24px;
+  color: var(--font-color-grey);
 }
 
 .descript {
-    font-size: 24px;
-    font-weight: 800;
+  font-size: 24px;
+  font-weight: 800;
 }
