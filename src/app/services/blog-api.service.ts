@@ -11,6 +11,7 @@ export class BlogApiService {
   private blogUrl: string = "";
   private articleData: ArticleData | any;
   private latestData: LatestData | any;
+  private newsletter: NewsletterData | any;
 
   constructor(private http: HttpClient) {
     this.blogUrl = environment.blogApi;
@@ -27,7 +28,7 @@ export class BlogApiService {
   }
   //Newsletter
   getNewsletter(url: string): Observable<NewsletterData> {
-    this.latestData = this.http.get<LatestData>(`${this.blogUrl}${url}`);
-    return this.latestData;
+    this.newsletter = this.http.get<NewsletterData>(`${this.blogUrl}${url}`);
+    return this.newsletter;
   }
 }

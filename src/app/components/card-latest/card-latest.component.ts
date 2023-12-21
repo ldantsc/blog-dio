@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { NgOptimizedImage } from "@angular/common";
 import { MoreDetailLinkComponent } from "../more-detail-link/more-detail-link.component";
 
@@ -13,6 +13,6 @@ export class CardLatestComponent {
   @Input() id: number = 0;
   @Input() title: string = "";
   @Input() description: string = "";
-  @Input() author: string = "";
+  @Input() author: string = "TESTE";
   @Input() image: string = "";
 }

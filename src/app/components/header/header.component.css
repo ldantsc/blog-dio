@@ -1,25 +1,26 @@
 li {
-    padding: 0 30px;
+  padding: 0 30px;
 }
 
 a {
-    font-size: 34px;
-    font-family: 'Lora', serif;
-    color: var(--font-color);
+  font-size: 34px;
+  font-family: "Lora", serif;
+  color: var(--font-color);
 }
 
 .navbar-padding {
-    padding: 80px 70px;
+  padding: 80px 70px;
 }
 
 .navbar-padding-test {
-    padding: 0 0;
+  padding: 0 0;
 }
 
-.nav-link:focus, .nav-link:hover {
-    color: var(--font-color-grey);
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--font-color-grey);
 }
 
 .nav-link.active {
-    color: white;
+  color: white;
 }

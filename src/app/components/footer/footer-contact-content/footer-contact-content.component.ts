@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-footer-contact-content',
+  selector: "app-footer-contact-content",
   standalone: true,
   template: `
-  <ol>
-    <li>{{ email }}</li>
-    <li>{{ phone }}</li>
-    <li>{{ adress }}</li>
-  </ol>
+    <ol>
+      <li>{{ email }}</li>
+      <li>{{ phone }}</li>
+      <li>{{ adress }}</li>
+    </ol>
   `,
   styles: `
   ol {
@@ -22,10 +22,10 @@ import { Component } from '@angular/core';
     font-family: "Lora", serif;
     font-size: 2rem;
   }
-  `
+  `,
 })
 export class FooterContactContentComponent {
-  email: string = "emailjhondoe@email.com"
-  phone: string = "+1 (386) 693-4183"
-  adress: string = "Flagler Beach, Florida(FL)"
+  email: string = "emailjhondoe@email.com";
+  phone: string = "+1 (386) 693-4183";
+  adress: string = "Flagler Beach, Florida(FL)";
 }

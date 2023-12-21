@@ -1,41 +1,41 @@
-.footer-main {  
-    margin: 75px 68px 0 68px;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-around;
-    height: 85%;
+.footer-main {
+  margin: 75px 68px 0 68px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-around;
+  height: 85%;
 }
 
 .footer-descript-container {
-    padding: 0 0 24px 0;
-    flex-shrink: 1;
+  padding: 0 0 24px 0;
+  flex-shrink: 1;
 }
 
 .footer-social-container {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 0 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 30px;
 }
 
 .footer-contact-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .footer-about-me {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid var(--font-color);
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--font-color);
 }
 
 .footer-about-me > a {
-    font-size: 3rem;
-    text-decoration: none;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
 .footer-about-me > a > p {
-    margin: 0;
-    padding: 18px;
-    font-family: "Lora";
+  margin: 0;
+  padding: 18px;
+  font-family: "Lora";
 }
