@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './more-detail-link.component.css'
 })
 export class MoreDetailLinkComponent {
-  link: string = "/content"
+  @Input() id: number = 0
 }

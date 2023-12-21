@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
-import { BlogApiService } from '../../services/blog-api.service';
-import { ArticleData } from '../../models/modelData';
 
 @Component({
   selector: 'app-card-article',
@@ -12,23 +10,10 @@ import { ArticleData } from '../../models/modelData';
   styleUrl: './card-article.component.css'
 })
 
-export class CardArticleComponent implements OnInit{
-
-  id: number = 1
-  article!:ArticleData
-  title: string = "Travel"
-  descript: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-  author: string = "Johne Doe"
-  img: string = "/assets/card-img.png"
-
-  constructor(private service: BlogApiService) {}
-
-  ngOnInit(): void {
-    this.service.getArticle(this.id).subscribe({
-      next(res) {
-        console.log(res)
-      },
-    })
-  }
-  
+export class CardArticleComponent {
+  @Input() id: number = 0
+  @Input() title: string = ""
+  @Input() description: string = ""
+  @Input() author: string = ""
+  @Input() image: string = ""
 }

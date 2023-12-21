@@ -1,14 +1,14 @@
 <div class="card-article-container">
-  <a [routerLink]="['content', '1']" >
-    <div class="card-article-text">
-      <h3 class="title">{{ title }}</h3>
+  <div class="card-article-text">
+    <a [routerLink]="['content', id]" >
+    <h3 class="title">{{ title }}</h3>
       <p class="descript">
-        {{ descript }}
+        {{ description }}
       </p>
       <p class="author">by {{ author }}</p>
+    </a>
     </div>
     <div class="card-image-arcticle-container">
-      <img class="custom-shadow" [ngSrc]="img" alt="arcticle image" srcset="" fill/>
+      <img class="custom-shadow" [ngSrc]="image" width="160" height="150" alt="arcticle image" srcset=""/>
     </div>
-  </a>
 </div>

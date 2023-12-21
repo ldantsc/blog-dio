@@ -19,12 +19,8 @@ export class FooterComponent implements OnInit {
   constructor(private service: BlogApiService){
   }
 
-  ngOnInit(): void {
-    this.service.getAboutFooter().subscribe({
-      next(res) {
-        console.log(res.footer)
-      },
-    })
-  }
+ngOnInit(): void {
+  
+}
 
 }

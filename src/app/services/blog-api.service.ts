@@ -2,37 +2,32 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { environment } from "../../environments/environment";
-import { ArticleData, LatestData, MoreDetailsData, NewsletterData } from "../models/modelData";
+import { ArticleData, LatestData, NewsletterData } from "../models/modelData";
 
 @Injectable({
   providedIn: "root",
 })
 export class BlogApiService {
   private blogUrl: string = "";
-  private modelData: ArticleData | any;
+  private articleData: ArticleData | any;
+  private latestData: LatestData | any;
 
   constructor(private http: HttpClient) {
     this.blogUrl = environment.blogApi;
   }
-
   // Articles
-  getArticle(id: number): Observable<ArticleData> {
-    this.modelData = this.http.get<ArticleData>(`${this.blogUrl}articles/${id}`);
-    return this.modelData;
+  getArticle(url: string): Observable<ArticleData> {
+    this.articleData = this.http.get<ArticleData>(`${this.blogUrl}${url}`);
+    return this.articleData;
   }
-  // Newsletter
-  getNewsletter(id: number): Observable<NewsletterData> {
-    this.modelData = this.http.get<NewsletterData>(`${this.blogUrl}newsletter/${id}`);
-    return this.modelData;
+  // Latest
+  getLatest(url: string): Observable<LatestData> {
+    this.latestData = this.http.get<LatestData>(`${this.blogUrl}${url}`);
+    return this.latestData;
   }
-  //Latest
-  getLatest(id: number): Observable<LatestData> {
-    this.modelData = this.http.get<LatestData>(`${this.blogUrl}latest/${id}`);
-    return this.modelData;
-  }
-  //About Us and Footer Info
-  getAboutFooter(): Observable<MoreDetailsData> {
-    this.modelData = this.http.get<MoreDetailsData>(`${this.blogUrl}more-details`);
-    return this.modelData;
+  //Newsletter
+  getNewsletter(url: string): Observable<NewsletterData> {
+    this.latestData = this.http.get<LatestData>(`${this.blogUrl}${url}`);
+    return this.latestData;
   }
 }
