@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { BlogApiService } from '../../services/blog-api.service';
+import { ArticleData } from '../../models/modelData';
 
 @Component({
   selector: 'app-card-article',
@@ -12,7 +13,9 @@ import { BlogApiService } from '../../services/blog-api.service';
 })
 
 export class CardArticleComponent implements OnInit{
-  
+
+  id: number = 1
+  article!:ArticleData
   title: string = "Travel"
   descript: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
   author: string = "Johne Doe"
@@ -21,12 +24,9 @@ export class CardArticleComponent implements OnInit{
   constructor(private service: BlogApiService) {}
 
   ngOnInit(): void {
-    this.service.getArticle(1).subscribe({
+    this.service.getArticle(this.id).subscribe({
       next(res) {
         console.log(res)
-      },
-      error(err) {
-        console.error(err)
       },
     })
   }

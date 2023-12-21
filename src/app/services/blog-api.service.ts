@@ -31,8 +31,8 @@ export class BlogApiService {
     return this.modelData;
   }
   //About Us and Footer Info
-  getAboutFooter(name: string): Observable<MoreDetailsData> {
-    this.modelData = this.http.get<MoreDetailsData>(`${this.blogUrl}more-details/${name}`);
+  getAboutFooter(): Observable<MoreDetailsData> {
+    this.modelData = this.http.get<MoreDetailsData>(`${this.blogUrl}more-details`);
     return this.modelData;
   }
 }

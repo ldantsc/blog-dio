@@ -20,9 +20,9 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getAboutFooter("footer").subscribe({
+    this.service.getAboutFooter().subscribe({
       next(res) {
-        console.log(res)
+        console.log(res.footer)
       },
     })
   }

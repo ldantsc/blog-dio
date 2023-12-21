@@ -24,11 +24,11 @@ export type LatestData = {
 }
 
 export type MoreDetailsData = {
-    about: {
-        describe: string;
-        image: string;
-    }
-    footer: {
-        describe: string;
-    }
+        about: {
+            describe: string;
+            image: string;
+        }
+        footer: {
+            describe: string;
+        }
 }
