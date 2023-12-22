@@ -1,11 +1,11 @@
 <div class="card-latest custom-shadow">
-  <img [ngSrc]="image" alt="lastest card" fill/>
+  <img [ngSrc]="image" alt="lastest card" fill priority=""/>
   <div class="content-latest-card">
     <h3 class="title">{{ title }}</h3>
     <p class="descript">{{ description }}</p>
     <p class="author">by {{ author }}</p>
     <div>
-      <app-more-detail-link [id]="id" />
+      <app-more-detail-link [postId]="postId" />
     </div>
   </div>
 </div>

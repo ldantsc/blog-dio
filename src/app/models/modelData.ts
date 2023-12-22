@@ -3,7 +3,10 @@ export type ArticlesData = {
   title: string;
   description: string;
   author: string;
-  post: string;
+  post: {
+    postId: number;
+    description: string;
+  }
   image: string;
 };
 

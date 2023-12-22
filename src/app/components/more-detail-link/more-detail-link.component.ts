@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './more-detail-link.component.css'
 })
 export class MoreDetailLinkComponent {
-  @Input() id: number = 0
+  @Input() postId: number = 0
 }

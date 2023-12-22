@@ -11,7 +11,7 @@ import { BlogApiService } from "../../services/blog-api.service";
   styleUrl: "./card-newsletter.component.css",
 })
 export class CardNewsletterComponent {
-  @Input() id: number = 0;
+  @Input() postId: number = 0;
   @Input() title: string = "";
   @Input() description: string = "";
   @Input() image: string = "";

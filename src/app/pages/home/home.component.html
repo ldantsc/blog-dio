@@ -7,7 +7,7 @@
       <h1>Latest</h1>
       @for (latest of latests; track $index) {
       <app-card-latest
-        [id]="latest.id"
+        [postId]="latest.post.postId"
         [title]="latest.title"
         [description]="latest.description"
         [author]="latest.author"
@@ -20,7 +20,7 @@
       <div class="articles">
         @for (article of articles; track $index) {
         <app-card-article
-          [id]="article.id"
+          [postId]="article.post.postId"
           [title]="article.title"
           [description]="article.description"
           [author]="article.author"
@@ -34,7 +34,7 @@
       <div class="newsletter-card-container">
         @for (newsletter of newsletters; track $index) {
         <app-card-newsletter
-          [id]="newsletter.id"
+          [postId]="newsletter.post.postId"
           [title]="newsletter.title"
           [description]="newsletter.description"
           [image]="newsletter.image"

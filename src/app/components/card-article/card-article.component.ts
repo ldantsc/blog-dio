@@ -11,7 +11,7 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
 })
 
 export class CardArticleComponent {
-  @Input() id: number = 0
+  @Input() postId: number = 0
   @Input() title: string = ""
   @Input() description: string = ""
   @Input() author: string = ""
