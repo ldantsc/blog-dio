@@ -26,7 +26,7 @@ export class PostsComponent implements OnInit {
     const result = this.posts
     return result
   }
-  
+
   ngOnInit(): void {
     this.route.paramMap.subscribe((value) => {
       this.id = value.get("id");
@@ -39,5 +39,4 @@ export class PostsComponent implements OnInit {
     });
     this.setValues("1")
   }
-
 }
