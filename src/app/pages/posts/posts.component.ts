@@ -14,19 +14,22 @@ export class PostsComponent implements OnInit {
   id: string | null = "0";
   title: string = "TITLE";
   author: string = "AUTHOR";
-  description: string = "TEXT KAKAKAKAKKSEOAKSEPOAKSPEOJASFIHNFUOBSOFUJBSFOUIS";
+  description: string = "TEXT ";
   image: string = "assets/about-image.png";
-  result: string = ""
+  result: string = "";
 
   posts!: ArticlesData | any;
 
-  constructor(private route: ActivatedRoute,private service: BlogApiService) {
+  constructor(private route: ActivatedRoute, private service: BlogApiService) {}
+  
+  setValues(id: string) {
+    const result = this.posts
+    return result
   }
-
+  
   ngOnInit(): void {
-
-    this.route.paramMap.subscribe( value => {
-      this.id = value.get("id")
+    this.route.paramMap.subscribe((value) => {
+      this.id = value.get("id");
     });
 
     this.service.getArticles("articles").subscribe({
@@ -34,11 +37,7 @@ export class PostsComponent implements OnInit {
         this.posts = res;
       },
     });
+    this.setValues("1")
   }
 
-  setValues(id: string){
-    const result = this.posts.filter((article: any) => article.id.toString() == id)
-    console.log(result)
-    this.result = result.id
-  }
 }
