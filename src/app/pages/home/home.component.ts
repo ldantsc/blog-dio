@@ -14,27 +14,13 @@ import { ArticlesData } from "../../models/modelData";
 })
 export class HomeComponent implements OnInit {
   articles!: ArticlesData | any;
-  latests!: ArticlesData | any;
-  newsletters!: ArticlesData | any;
 
   constructor(private service: BlogApiService) {}
 
   ngOnInit(): void {
-    this.service.getArticles("articles").subscribe({
+    this.service.getData("articles").subscribe({
       next: (res: ArticlesData) => {
         this.articles = res;
-      },
-    });
-
-    this.service.getArticles("latest").subscribe({
-      next: (res: ArticlesData) => {
-        this.latests = res;
-      },
-    });
-
-    this.service.getArticles("newsletter").subscribe({
-      next: (res: ArticlesData) => {
-        this.newsletters = res;
       },
     });
   }

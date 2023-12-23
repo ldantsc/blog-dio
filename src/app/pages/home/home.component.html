@@ -5,13 +5,13 @@
   >
     <div class="col latest-container">
       <h1>Latest</h1>
-      @for (latest of latests; track $index) {
+      @for (article of articles; track $index) {
       <app-card-latest
-        [postId]="latest.post.postId"
-        [title]="latest.title"
-        [description]="latest.description"
-        [author]="latest.author"
-        [image]="latest.image"
+        [postId]="article.id"
+        [title]="article.title"
+        [description]="article.description"
+        [author]="article.author"
+        [image]="article.image"
       />
       }
     </div>
@@ -20,7 +20,7 @@
       <div class="articles">
         @for (article of articles; track $index) {
         <app-card-article
-          [postId]="article.post.postId"
+          [postId]="article.id"
           [title]="article.title"
           [description]="article.description"
           [author]="article.author"
@@ -32,12 +32,12 @@
     <div id="newsletter-container" class="row newsletter-container">
       <h3>Newsletter</h3>
       <div class="newsletter-card-container">
-        @for (newsletter of newsletters; track $index) {
+        @for (article of articles; track $index) {
         <app-card-newsletter
-          [postId]="newsletter.post.postId"
-          [title]="newsletter.title"
-          [description]="newsletter.description"
-          [image]="newsletter.image"
+          postId]="article.id"
+          [title]="article.title"
+          [description]="article.description"
+          [image]="article.image"
         />
         }
       </div>

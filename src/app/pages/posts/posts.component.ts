@@ -17,9 +17,8 @@ export class PostsComponent implements OnInit {
   description: string = "TEXT ";
   image: string = "assets/about-image.png";
   result: string = "";
-
   posts!: ArticlesData | any;
-
+  
   constructor(private route: ActivatedRoute, private service: BlogApiService) {}
   
   setValues(id: string) {
@@ -32,12 +31,15 @@ export class PostsComponent implements OnInit {
       this.id = value.get("id");
     });
 
-    this.service.getArticles("articles").subscribe({
+    this.service.getData("articles").subscribe({
       next: (res: ArticlesData) => {
+        console.log(res, 'res')
         this.posts = res;
+        console.log(this.posts, 'this.posts')
       },
     });
-    this.setValues("1")
+
+    
   }
 
 }
