@@ -1,3 +1,24 @@
+.posts-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.post-container {
+    text-align: center;
+}
+
+.post-image-container {
+    position: relative;
+    width: 500px;
+    height: 400px;
+}
+
+.btn-return-container {
+    padding: 30px;
+}
+
 p {
     font-size: 2.4rem
 }

@@ -5,41 +5,43 @@
   >
     <div class="col latest-container">
       <h1>Latest</h1>
-      @for (latest of latests; track $index) {
+      @for (latest of articles; track $index) { @if(latest.type === "latest") {
       <app-card-latest
-        [postId]="latest.post.postId"
+        [postNumber]="latest.postNumber"
         [title]="latest.title"
         [description]="latest.description"
         [author]="latest.author"
         [image]="latest.image"
       />
-      }
+      } }
     </div>
-    <div class="col articles-container">
+    <div class="col articles-content">
       <h2 class="subtitle">articles</h2>
-      <div class="articles">
-        @for (article of articles; track $index) {
+      <div class="articles-container">
+        @for (article of articles; track $index) { @if(article.type ===
+        "article") {
         <app-card-article
-          [postId]="article.post.postId"
+          [postNumber]="article.postNumber"
           [title]="article.title"
           [description]="article.description"
           [author]="article.author"
           [image]="article.image"
         />
-        }
+        } }
       </div>
     </div>
     <div id="newsletter-container" class="row newsletter-container">
       <h3>Newsletter</h3>
       <div class="newsletter-card-container">
-        @for (newsletter of newsletters; track $index) {
+        @for (newsletter of articles; track $index) { @if(newsletter.type ===
+        "newsletter") {
         <app-card-newsletter
-          [postId]="newsletter.post.postId"
+          [postNumber]="newsletter.postNumber"
           [title]="newsletter.title"
           [description]="newsletter.description"
           [image]="newsletter.image"
         />
-        }
+        } }
       </div>
     </div>
   </main>

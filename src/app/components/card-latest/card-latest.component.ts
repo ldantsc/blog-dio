@@ -10,7 +10,7 @@ import { MoreDetailLinkComponent } from "../more-detail-link/more-detail-link.co
   styleUrl: "./card-latest.component.css",
 })
 export class CardLatestComponent {
-  @Input() postId: number = 0;
+  @Input() postNumber: number = 0;
   @Input() title: string = "";
   @Input() description: string = "";
   @Input() author: string = "";

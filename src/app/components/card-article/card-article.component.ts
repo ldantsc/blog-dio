@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { RouterLink, ActivatedRoute } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-card-article',
@@ -11,7 +11,7 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
 })
 
 export class CardArticleComponent {
-  @Input() postId: number = 0
+  @Input() postNumber: number = 0
   @Input() title: string = ""
   @Input() description: string = ""
   @Input() author: string = ""

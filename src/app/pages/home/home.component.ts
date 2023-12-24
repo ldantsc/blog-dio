@@ -5,7 +5,6 @@ import { CardNewsletterComponent } from "../../components/card-newsletter/card-n
 import { BlogApiService } from "../../services/blog-api.service";
 import { ArticlesData } from "../../models/modelData";
 
-
 @Component({
   standalone: true,
   imports: [CardLatestComponent, CardArticleComponent, CardNewsletterComponent],
@@ -13,28 +12,14 @@ import { ArticlesData } from "../../models/modelData";
   styleUrl: "./home.component.css",
 })
 export class HomeComponent implements OnInit {
-  articles!: ArticlesData | any;
-  latests!: ArticlesData | any;
-  newsletters!: ArticlesData | any;
+  articles: ArticlesData | any;
 
   constructor(private service: BlogApiService) {}
 
   ngOnInit(): void {
-    this.service.getArticles("articles").subscribe({
-      next: (res: ArticlesData) => {
-        this.articles = res;
-      },
-    });
-
-    this.service.getArticles("latest").subscribe({
-      next: (res: ArticlesData) => {
-        this.latests = res;
-      },
-    });
-
-    this.service.getArticles("newsletter").subscribe({
-      next: (res: ArticlesData) => {
-        this.newsletters = res;
+    this.service.getArticles().subscribe({
+      next: (response: ArticlesData) => {
+        this.articles = response;
       },
     });
   }

@@ -11,33 +11,36 @@ import { ArticlesData } from "../../models/modelData";
   styleUrl: "./posts.component.css",
 })
 export class PostsComponent implements OnInit {
-  id: string | null = "0";
-  title: string = "TITLE";
-  author: string = "AUTHOR";
-  description: string = "TEXT ";
+  private id: any = "0";
+  title: string = "";
+  author: string = "";
+  description: string = "";
   image: string = "assets/about-image.png";
-  result: string = "";
 
-  posts!: ArticlesData | any;
+  post: Array<any> = [];
+  article!: ArticlesData;
 
   constructor(private route: ActivatedRoute, private service: BlogApiService) {}
-  
-  setValues(id: string) {
-    const result = this.posts
-    return result
-  }
-  
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((value) => {
-      this.id = value.get("id");
-    });
 
-    this.service.getArticles("articles").subscribe({
-      next: (res: ArticlesData) => {
-        this.posts = res;
+  ngOnInit(): void {
+    this.service.getArticles().subscribe({
+      next: (response: ArticlesData | any) => {
+        for (let data of response) {
+          this.post.push(data);
+        }
+
+        this.route.paramMap.subscribe((value) => {
+          this.id = value.get("id");
+          this.article = this.setValue(parseInt(this.id));
+        });
       },
     });
-    this.setValues("1")
   }
 
+  setValue(id: number): any | undefined {
+    const findData = this.post.find((arr) => {
+      return arr.postNumber === id;
+    });
+    return findData;
+  }
 }

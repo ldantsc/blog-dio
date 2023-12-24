@@ -15,8 +15,8 @@ export class BlogApiService {
     this.blogUrl = environment.blogApi;
   }
   // Get Data Articles
-  getArticles(url: string): Observable<ArticlesData> {
-    this.articlesData = this.http.get<ArticlesData>(`${this.blogUrl}${url}`);
+  getArticles(): Observable<ArticlesData> {
+    this.articlesData = this.http.get<ArticlesData>(`${this.blogUrl}articles`);
     return this.articlesData;
   }
 }

@@ -1,21 +1,10 @@
-export type ArticlesData = {
+export interface ArticlesData {
   id: number;
+  postNumber: number;
+  type: string;
   title: string;
   description: string;
   author: string;
-  post: {
-    postId: number;
-    description: string;
-  }
+  article: string;
   image: string;
-};
-
-export type MoreDetailsData = {
-  about: {
-    describe: string;
-    image: string;
-  };
-  footer: {
-    describe: string;
-  };
-};
+}
